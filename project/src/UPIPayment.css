@@ -1,0 +1,26 @@
+.upi-payment {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  
+  .upi-payment input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+   
+  }
+  
+  .upi-payment button {
+    padding: 10px 20px;
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .upi-payment button:hover {
+    background-color: #219049;
+  }

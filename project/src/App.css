@@ -1,0 +1,732 @@
+/* .AppGlass1{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+} */
+:root {
+  
+  --yellow: linear-gradient(180deg, #F8D49A -146.42%, #FAD79D -46.42%);
+  --orange: #fca61f;
+  --black: #242d49;
+  --gray: #788097;
+  --purple: linear-gradient(180deg, #BB67FF 0%, #C484F3 100%);
+  --pink: #FF919D;
+  --glass: rgba(255, 255, 255, 0.54);
+  --boxShadow: 0px 19px 60px rgb(0 0 0 / 8%);
+  --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
+  --activeItem: #f799a354;
+  
+}
+
+
+.App {
+  padding: 0.5rem 3.5rem;
+  color: var(--black);
+  background: linear-gradient(
+    106.37deg,
+    #ffe1bc 29.63%,
+    #ffcfd1 51.55%,
+    #f3c6f1 90.85%
+  );
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  
+}
+
+
+.AppGlass1 {
+  
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1200px) {
+  .AppGlass{
+    grid-template-columns: 10% 50% auto;
+    overflow-y: scroll;
+  } 
+}
+
+@media screen and (max-width: 768px) {
+  .AppGlass{
+    grid-template-columns: 1fr;
+  } 
+}
+.image-container {
+  text-align: center;          
+  width: 60%;
+  height: 50%;
+  flex-wrap: wrap;
+  
+  background-color: rgb(227, 215, 250);
+
+ }
+
+#bg{
+  width: 100%;
+
+  position: relative;
+ 
+ }
+
+#nivin{
+  position: relative;
+  bottom: 500px;
+  height: 10px;
+  width: 100%;
+
+}
+
+p {
+  font-size: 30px;
+ }
+
+.dash {
+  font-size: 60px;
+  margin-top: 40px;
+  position: absolute;
+  margin-left: 250px;
+  text-transform: uppercase;
+}
+
+
+  
+.doctor-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 100px;
+  background-color: antiquewhite;
+ }
+
+
+.doctor-container {
+  flex-basis: calc(33.33% - 80px); 
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 80px;
+  border: 10px solid white;
+}
+
+
+.doctor-image {
+  width: 100%;
+  height:400px;
+  border: 1px solid grey; 
+  object-fit: cover; 
+  margin-bottom: 10px;
+  
+}
+.special-selector button{
+
+  font-size: 15px;
+  background-color: #f3c7c7;
+  color:blue;
+text-transform: uppercase;
+height: 30px;
+margin-left: 10px;
+border-radius: 5px;
+border: none;
+margin-top: 10px;
+}
+.special-selector button:hover{
+  background-color:black;
+}
+
+
+.doctor-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+
+.doctor-specialization {
+  font-size: 1.5rem;
+  color: black;
+}
+.doctor-availability {
+  font-size: 1.5rem;
+  color: black;
+  font-weight: bold;
+  /* Change to your desired color */
+  margin-top: 5px;
+}
+.image-container {
+  position: relative;
+  overflow: hidden;
+ 
+}
+
+.image-hover-effect {
+  transform: scale(1.1); 
+  transition: transform 0.3s ease; 
+
+}
+
+.doctor-image:hover {
+  transform: scale(1.1); 
+ 
+}
+.nav {
+  height: 150px;
+  width: 80px;
+  min-width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+  margin: auto;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+a {
+  position: relative;
+  text-decoration: none;
+  font-family: 'poppins', sans-serif;
+  color: black;
+  font-size: 30px;
+  letter-spacing: 0.5px;
+}
+
+a:after {
+  content: "";
+  position: absolute;
+  background-color: palevioletred;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: darkmagenta;
+}
+
+a:hover:after {
+  width: 100%;
+}
+.medicine-page {
+  max-width: 80px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.medicine-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.medicine-card img {
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+
+/* ImageComponent.css */
+.medicine-dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.medicine-card {
+  width: 250px; /* Fixed width for each medicine card */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.2s; 
+}
+
+
+.medicine-card:hover {
+  transform: scale(1.05); 
+}
+
+.medicine-card img {
+  max-width: 100%; 
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Style the "Add to Cart" button */
+.medicine-card button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style the "View Cart" link */
+.medicine-list a {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.medicine-content {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  width: 45%;
+  place-items: center;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+  margin-top: 0;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.medicine-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.medicine-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+h5 {
+  font-size: 24px;
+  text-align: center;
+}
+
+h5 {
+  font-size: 20px;
+  margin-top: 0;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+
+.cart {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 20px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.total-amount {
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.payment-success-popup {
+  background-color:antiquewhite;
+  color:black;
+  padding: 10px;
+  border-radius: 3px;
+  text-align: center;
+}
+.search{
+  height: 35px;
+  width: 300px;
+  border-style: ridge;
+  margin-top: 10px;
+  margin-left: 500px;
+ 
+}
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* > * {
+    /* font-family: "Poppins", cursive; */
+    margin: 0;
+} 
+
+ 
+App {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+} 
+
+.register{
+  max-width: 978px;
+  width: 100vw;
+  display:flex;
+  border: 1px solid #e9ecef;
+  border-radius: 5px;
+  box-shadow: 1px 3px 10px #e9ecef; 
+   background-color: white;
+   margin-left: 220px;
+}
+
+.register span{
+  color: #adb5bd;
+}
+
+#form{
+  max-width: 320px;
+  width: 100vw;
+  margin: 2em auto;
+}
+
+#form >  input, .btn{
+  border: 1px solid #e9ecef;
+  padding: .9em 1em;
+}
+
+#form > input:focus{
+  outline: none;
+}
+
+#form > .btn{
+  background-color: #003049;
+  color: #e9ecef;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.flex{
+  display: flex;
+  gap: 1em;
+}
+
+.flex-col{
+  flex-direction: column;
+}
+
+.register .col-1{
+  margin: auto;
+  padding: 3em 0;
+}
+
+.register .col-2 img{
+  width: 480px;
+  height: 100%;
+  object-fit: cover;
+  align-self: flex-end;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: none;
+} 
+
+@media screen and (min-width: 860px)  {
+  .register .col-2 img{
+    display: initial;
+  }
+} 
+
+
+  .room-allotment {
+  
+    max-width: 1000%;
+  
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  
+
+
+.room-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 50px;
+}
+
+.room-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 15px; 
+}
+
+
+.room-card.Occupied {
+  background-color: #f3c7c7;
+  transition: 0.5s ease-in;
+  border-radius: 25px;
+}
+.room-card.Occupied:hover{
+  background-color: black;
+  color: #f3c7c7;
+  transition: 0.5s ease-out;
+
+}
+
+.room-card.Available {
+  background-color: #c7f3d7;
+  transition: 0.5s ease-in;
+  border-radius: 25px;
+}
+.room-card.Available:hover{
+  background-color:black;
+  color: #f3c7c7;
+  transition: 0.5s ease-out;
+
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 14px; 
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+.filters{
+  margin-left: 200px;
+}
+.find{
+  height: 50px;
+  width: 350px;
+  border-style: ridge;
+  border-radius: 7px;
+background-color:pink;
+font-size: 20px;
+color: black;
+border: none;
+}
+.find ::placeholder{
+  font-weight: bold;
+  color: black;
+  
+}
+.label{
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 40px;
+}
+
+.bed{
+  margin-left: 50px;
+  height: 50px;
+  width: 250px;
+  background-color:pink ;
+  border-radius: 7px;
+  border: none;
+  font-size: 20px;
+}
+
+
+.table-container {
+  margin: 20px;
+  margin-left:350px;
+  margin-right: 200pxcd ;
+  margin-left: 30px;
+
+  
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.2rem;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.styled-table thead {
+  background-color: #3498db;
+  color: white;
+}
+
+.styled-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.styled-table tbody tr:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+ .info{
+  margin-left: 15px;
+
+height: 100%;
+width: 900%;
+
+} 
+.styled-table th,
+.styled-table td {
+  border: 1px solid #ddd;
+}
+.styled-table th {
+  background-color: #3498db;
+  color: white;
+  font-weight: bold;
+}
+.styled-table tbody tr:hover {
+  background-color: black;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+.styled-table caption {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.styled-table th {
+  font-size: 1.3rem;
+}
+.healthcare h1{
+margin-top: -150px;
+padding-bottom: 50px;
+color: rgb(24, 85, 177);
+font-size: xx-large;
+
+}
+.admin {
+ 
+  text-align: center;
+} */
+ 
+.Table {
+  margin-top: 20px;
+margin-left: 350px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+  margin-right: 600px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.add-patient {
+  padding: 10px 20px;
+  background-color: #00b5ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-left: 662px;
+  
+}
+.table button{
+  padding: 20px;
+  padding-bottom: 30px;
+}
+button:hover {
+  background-color: #008ecf;
+}
+
+button:disabled {
+  background-color: lightgray;
+  cursor: not-allowed;
+}
+
+button:disabled:hover {
+  background-color: lightgray;
+}
+
+Table {
+  margin-top: 20px;
+}
+
+.TableContainer {
+  margin-top: 20px;
+}
+
+.TableHead {
+  background-color: #00b5ff;
+}
+
+.TableHead th {
+  color: white;
+}
+
+.TableBody {
+  color: #333;
+}
+
+.TableBody td {
+  padding: 10px;
+} 
+
